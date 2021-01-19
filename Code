@@ -1,0 +1,501 @@
+//MANDALA  MIDTERM
+//BALLAIS, JEFF GIUSEPPE M.
+// BSEMC  2A
+
+const CIRCLE = 800
+const SIDES = 52
+const angle = 360 / SIDES
+const WAVE = 24
+const WAVES = 360 / WAVE
+const TRIAD = 24
+const TRIADS = 360 / TRIAD
+
+const SHARK = 4
+const SHARKS = 360 / SHARK
+
+const LEA = 10
+const LEAS = 360 / LEA
+
+const LAST = 8
+const LASTS = 360 / LAST
+
+function setup() {
+  createCanvas(900, 900)
+  angleMode(DEGREES)
+  rectMode(CENTER)
+}
+
+function draw() {
+  background('#19B5FE');
+
+  {
+   
+    // First Circle
+    // CRISS CROSS
+    push()
+    translate(width/2, height/2)
+    fill('black')
+    ellipse(0, 0, 830, 830)
+   
+   
+    for (let i = 0; i < SIDES; i++) {
+      stroke(255, 255, 255)
+      line(22, 404, 31, 403)
+      line(22,407,31, 406)
+      line(22,410,31, 409)
+   
+         
+      rotate(angle)
+    }
+   
+   
+   
+    for (let i = 0; i < SIDES; i++) {
+     
+      stroke(255, 255, 255)
+      line(0, 403, 0, 412)
+      line(-3,403,-3, 412)
+      line(3, 403, 3, 412)
+     
+     
+      rotate(angle)
+    }
+    pop()
+   
+   
+   
+   
+      // Second Circle
+    push()
+    translate(width/2, height/2)
+
+    ellipse(0, 0, 800,800)
+    pop()
+   
+  push()
+   
+   
+   
+   
+   
+    // Third Circle
+    push()
+    translate(width/2, height/2)
+  fill('black')
+    ellipse(0, 0, 780, 780)
+    pop()
+   
+   
+   
+   
+   
+    // Fourth Circle
+    // WAVE
+  push()
+    translate(width/2, height/2)
+   
+    ellipse(0, 0, 765, 765)
+   
+    push()
+     for (let i = 0; i < WAVE; i++) {
+        fill('black')
+       stroke(255, 255, 255)
+    arc(-20, 300,120,150, 0,180);
+       
+       fill(255)
+       ellipse(-45, 275, 70, 200)
+       
+       rotate(WAVES)
+       
+    }
+   
+    pop()
+    pop()
+   
+   
+   
+   
+    // Fifth Circle
+    push()
+    translate(width/2, height/2)
+  fill('black')
+    ellipse(0, 0, 710, 710)
+   
+   
+   
+    pop()
+   
+   
+   
+   
+    // Sixth Circle
+    push()
+    translate(width/2, height/2)
+ 
+    ellipse(0, 0, 700, 700)
+   
+    pop()
+   
+   
+   
+   
+   
+    // Seventh Circle
+    // Triangles
+    push()
+    translate(width/2, height/2)
+    strokeWeight(2);
+    ellipse(0, 0, 677, 677)
+   
+   
+    for (let i = 0; i < TRIAD; i++) {
+      line(22, 338, 40, 309)
+      line(0, 310, 22, 338)
+      line(0, 310, -22, 338)
+      line(-22, 338, -40, 309)
+     
+      line(22, 328, 39, 299)
+      line(0, 300, 22, 328)
+      line(0, 300, -22, 328)
+      line(-22, 328, -39, 299)
+     
+     
+     
+      // Lower line 1
+      line(14, 329, 10, 335)
+      line(10, 322, 5, 330)
+      line(5, 317, 0, 325)
+     
+     
+      // Upper line 1
+      line(25, 310, 18, 322)
+      line(18, 308, 14, 315)
+      line(12, 305, 9, 310)
+     
+      rotate(TRIADS)
+    }
+ 
+    pop()
+   
+   
+   
+   
+   
+   
+   
+    // Eight Circle
+    // Sharks
+    push()
+    translate(width/2, height/2)
+   
+ 
+    ellipse(0, 0, 600, 600)
+   
+     
+    for (let i = 0; i < SHARKS ; i++) {
+       strokeWeight(2);
+     
+      //TRIANGLE
+      push()
+     
+      push()
+     
+       beginShape();
+     
+  vertex(250, 130);
+  vertex(130, 250);
+  vertex(92, 92);
+     
+  //add more vertex
+endShape(CLOSE);
+     
+      pop()
+      beginShape();
+  vertex(250, 130);
+  vertex(130, 250);
+  vertex(92, 92);
+  //add more vertex
+endShape(CLOSE);
+     
+      beginShape();
+  vertex(220, 110);
+  vertex(110, 220);
+  vertex(92, 92);
+  //add more vertex
+endShape(CLOSE);
+      pop()
+     
+     
+     
+     
+      //CIRCLES
+      push()
+      ellipse(155, 155, 110,110)
+     
+      push()
+      fill('black')
+      ellipse(155, 155, 95,95)
+      pop()
+      ellipse(155, 155, 75,75)
+     
+      push()
+      fill('black')
+      ellipse(155, 155, 60,60)
+      pop()
+      ellipse(155, 155, 45,45)
+     
+      ellipse(155, 155, 30,30)
+      fill('black')
+      ellipse(155, 155, 10,10)
+     
+      pop()
+     
+     
+     
+           
+      //EYES
+      push()
+      fill('black')
+      ellipse(65, 210, 15, 15)
+       ellipse(-65, 210, 15, 15)
+     
+      fill(255)
+      stroke(255, 255, 255)
+      ellipse(64, 213, 10, 5)
+      ellipse(-64, 213, 10, 5)
+     
+      pop()
+     
+
+      //Shark figure
+      arc(0, 95,160,390, 0,180);
+     
+       //JAWS
+      push()
+      fill(220)
+      arc(0, 130,120,220, 0,180);
+      pop()
+     
+      //Mouth
+      push()
+      fill('black')
+      arc(0, 130,120,185, 0,180);
+      pop()
+     
+      //gums down
+      push()
+       fill(220)
+      arc(0, 90,150,155, 0,180);
+      pop()
+     
+     
+      //Teeth
+      push()
+     
+      push()
+      fill('black')
+      ellipse(0, 222, 10, 10)
+      pop()
+     
+      //Upper Left
+      triangle(1, 227, 15, 221, 6, 205); //1
+      triangle(18, 220, 30, 213, 19, 196); //2
+      triangle(32, 212, 41, 202, 29, 194); //3
+      triangle(42, 200, 47, 188, 35, 182); //4
+      triangle(49, 188, 52, 178, 43, 173); //5
+     
+       //Upper Right
+      triangle(-1, 227, -15, 221, -6, 205); //1
+      triangle(-18, 220, -30, 213, -19, 196); //2
+      triangle(-32, 212, -41, 202, -29, 194); //3
+      triangle(-42, 200, -47, 188, -35, 182); //4
+      triangle(-49, 188, -52, 178, -43, 173); //5
+     
+     
+     
+      //Lower Left
+      triangle(1, 164, 15, 161, 11, 185); //1
+      triangle(18, 159, 30, 158, 25, 180); //2
+      triangle(32, 158, 43, 151, 38, 175); //3
+      triangle(30, 29, 55, 145, 50, 160); //4
+     
+      //Lower Right
+      triangle(-1, 164, -15, 161, -11, 185); //1
+      triangle(-18, 159, -30, 158, -25, 180); //2
+      triangle(-32, 158, -43, 151, -38, 175); //3
+      triangle(-30, 29, -55, 145, -50, 160); //4
+     
+     
+     
+     
+      pop()
+     
+     
+      arc(0, 90,160,135, 0,180);
+     
+      //Hidden Jutsu
+      push()
+      stroke(255, 255, 255)
+      ellipse(67, 103, 25, 70)
+      ellipse(-67, 103, 25, 70)
+      pop()
+     
+  //      ellipse(0, 210, 10, 10) // upper jaw
+  //      ellipse(0, 150, 10, 10) // lower jaw
+     
+
+     
+      //NOSE
+      push()
+     
+      fill('black')
+      ellipse(30, 260, 2, 7)
+     
+       ellipse(-30, 260, 2, 7)
+     
+      rotate(30)
+      pop()
+     
+     
+     
+     
+     
+     
+      //line(0, 125, 0, 300) // Guide line
+     
+     
+      rotate(SHARKS)
+    }
+   
+  pop()
+   
+   
+   
+   
+   
+   
+   
+     // Ninth Circle
+    // Quad Leaves
+    push()
+    translate(width/2, height/2)
+    fill('black')
+    ellipse(0, 0, 250, 250)
+   
+    for (let i = 0; i < LEAS; i++) {
+      push()
+      fill(255)
+      quad(34, 105, 0, 125, -34, 105, 0, 85);
+  //          1        2        3       4
+     
+     
+     
+     
+      push()
+     
+      triangle(34, 105, -34, 105, 0, 85);
+     
+      push()
+      fill('black')
+      triangle(20, 101, -20, 101, 0, 89);
+      pop()
+     
+      triangle(6, 97, -6, 97, 0, 93);
+      pop()
+      pop()
+     
+      rotate(LEAS)
+    }
+    pop()
+   
+   
+   
+   
+       // Tenth Circle
+    // LAST DESIGN
+    push()
+    translate(width/2, height/2)
+   
+
+    ellipse(0, 0, 170, 170)
+   
+   
+      for (let i = 0; i < LASTS ; i++) {
+        strokeWeight(2);
+        line(0, 0, 0, 72)
+        fill('black')
+        ellipse(12, 79, 10, 10)
+     
+        ellipse(15, 79, 10, 10)
+        ellipse(22, 76, 10, 10)
+     
+        ellipse(25, 76, 10, 10)
+     
+     
+        ellipse(32, 74, 10, 10)
+     
+     
+     
+        ellipse(36, 71, 10, 10)
+     
+        ellipse(42, 70, 10, 10)
+        ellipse(50, 66, 7, 5)
+     
+     
+        triangle(5, 85, 55, 63, 18, 45);
+     
+   
+   rotate(LASTS)
+    }
+   
+   
+   
+   
+   
+      for (let i = 0; i < LASTS ; i++) {
+     
+     
+     
+        push()
+        strokeWeight(1);
+        fill('black')
+        triangle(6, 25, -6, 25, 0, 55);
+        pop()
+   
+   rotate(LASTS)
+    }
+    pop()
+   
+   
+   
+   
+   
+   
+    // SECOND to the Last Circle
+    push()
+    translate(width/2, height/2)
+    strokeWeight(2);
+    ellipse(0, 0, 50, 50)
+   
+   
+    pop()
+   
+   
+   
+   
+   
+   
+     // Last Circle
+    push()
+    translate(width/2, height/2)
+    fill('black')
+    ellipse(0, 0, 10, 10)
+   
+   
+   
+   
+    pop()
+   
+   
+}
+}
