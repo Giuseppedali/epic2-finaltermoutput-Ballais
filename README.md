@@ -4,4 +4,4 @@ I created my mandala output using p5.js Web Editor. The design I choose to creat
 
 The references that I used for making the mandala output: https://p5js.org/reference/ https://www.youtube.com/watch?v=C8DeS2i81IY https://www.youtube.com/watch?v=se9rsp2VMWk&t=12s https://www.youtube.com/watch?v=Efnl8kPL6Kw&t=9s
 
-If there was no pandemic, i would love to learn more on Game Design and more Coding skills
+If there was no pandemic, i would love to learn more on Game Design and more Coding skills.
